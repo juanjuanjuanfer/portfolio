@@ -6,7 +6,7 @@ from io import BytesIO
 
 # Page configuration
 st.set_page_config(
-    page_title="Juan Fernandez | Portfolio",
+    page_title="Juan Fernandez | Portafolio",
     page_icon="⚡",
     layout="wide",
     initial_sidebar_state="collapsed"
@@ -142,13 +142,12 @@ st.markdown("""
     </style>
     """, unsafe_allow_html=True)
 
-
-# Button to go to /pages/portafolio.py
-
+# Header section with minimal design
 st.markdown("""<div class="profile-container">
-            <a href="portafolio">
-        <button>VER EN ESPAÑOL</button>
+            <a href="portfolio">
+        <button>SEE IN ENGLISH</button>
             </a>""", unsafe_allow_html=True)
+
 
 col1, col2 = st.columns([1, 2])
 
@@ -159,19 +158,19 @@ with col1:
 
 with col2:
     st.title("JUAN FERNANDEZ")
-    st.markdown("### DATA ANALYST | DATA ENGINEER")
-    st.markdown("```python\n# About me\ndef professional_summary():\n    return '''Aspiring Data Analyst and Engineer\n           focused on AI, LLM, and Software Development\n           with expertise in data management and analysis.'''")
+    st.markdown("### ANALISTA DE DATOS | INGENIERO DE DATOS")
+    st.markdown("```python\n# Sobre mi\ndef resumen_profesional():\n    return '''Aspirante a Ingeniero de Datos y Analista de Datos\n           con enfoques en AI, LLMs, y Desarrollo de Software\n           con experiencia en manejo de datos y analisis de datos.'''")
 
 st.markdown('</div>', unsafe_allow_html=True)
 
 # Minimal Social Links
-st.markdown("## CONNECT")
+st.markdown("## CONTACTO")
 cols = st.columns(4)
 social_links = {
     "GITHUB": "https://github.com/juanjuanjuanfer",
     "LINKEDIN": "https://www.linkedin.com/in/juan-antonio-fernandez-cruz/",
     "LETTERBOXD": "https://letterboxd.com/fer_nwn/",
-    "EMAIL": "mailto:fercruzjuan2002@gmail.com"
+    "CORREO": "mailto:fercruzjuan2002@gmail.com"
 }
 
 for col, (platform, link) in zip(cols, social_links.items()):
@@ -179,37 +178,37 @@ for col, (platform, link) in zip(cols, social_links.items()):
         st.markdown(f"[{platform}]({link})")
 
 # CV Download
-st.markdown("## RESUME")
+st.markdown("## CURRICULUM")
 st.markdown(f'''
     <a href="https://drive.google.com/file/d/1SM-Q4Kcns-oygMUbmoUgLWGLdp7FE4g6/view?usp=sharing" target="_blank">
         <button style="width:100%; background-color:#333; color:white; padding:1rem; border:none; cursor:pointer; font-family:'JetBrains Mono',monospace;">
-            DOWNLOAD CV.pdf
+            DESCARGAR CV.pdf
         </button>
     </a>
 ''', unsafe_allow_html=True)
 
 # Experience Section
-st.markdown("## EXPERIENCE")
+st.markdown("## EXPERIENCIA")
 
 experiences = [
     {
-        "title": "DATA ANALYST INTERN | Instituto Laneduc",
-        "period": "APR 2024 - JUL 2024",
+        "title": "INTERNO DE ANALISIS DE DATOS | Instituto Laneduc",
+        "period": "ABRIL 2024 - JULIO 2024",
         "details": [
-            "Led data-driven English program improvement project",
-            "Analyzed student performance trends across multiple generations",
-            "Delivered strategic teaching recommendations",
-            "ACHIEVEMENT: Identified about 27% improvement opportunity in student performance through data analysis"
+            "Dirigí un proyecto de mejora del programa de inglés basado en datos.",
+            "Analizé el rendimiento de estudiantes en varias generaciones.",
+            "Recomendaciones estratégicas para la enseñanza del idioma inglés.",
+            "ACHIEVEMENT: Identifiqué un 27% de mejora en la eficiencia del programa de inglés a través del análisis de datos."
         ]
     },
     {
-        "title": "DATA SCIENCE INTERN | Smartia",
-        "period": "JAN 2023 - APR 2023",
+        "title": "INTERNO DE CIENTIFICO DE DATOS | Smartia",
+        "period": "ENERO 2023 - ABRIL 2023",
         "details": [
-            "Developed real-time OpenCV pothole detection system",
-            "Created infrastructure planning density maps",
-            "Implemented data visualization dashboards",
-            "ACHIEVEMENT: Improved Merida's street maintenance efficiency with a 98% confidence rate in pothole detection"
+            "Desarrollé un sistema de detección de baches en tiempo real con OpenCV.",
+            "Creé mapas de densidad de la detección de baches en Mérida Yucatán.",
+            "Implementé dashboards de análisis de los datos obtenidos.",
+            "ACHIEVEMENT: Ayudé al mantenimiento de las calles de Mérida con un modelo con eficiencia de 98% para la detección de baches."
         ]
     }
 ]
@@ -239,55 +238,53 @@ for exp in experiences:
             else:
                 st.markdown(f"- {detail}")  
 # Education Section
-st.markdown("## EDUCATION")
+st.markdown("## EDUCACION")
 st.markdown("""
 ```plaintext
 UNIVERSIDAD POLITÉCNICA DE YUCATÁN
-B.S. DATA ENGINEERING | 2021 - 2025
+INGENIERIA DE DATOS | 2021 - 2025
 
-CORE COMPETENCIES:
-| Python | SQL | ETL | Database Management |
-| Real-time Analysis | Business Intelligence |
-| Data Modeling | System Architecture |
+COMPETENCIAS PRINCIPALES:
+| Python | SQL | ETL | Manejo de Based de Datos |
+| Análisis en tiempo-real | Business Intelligence |
+| Modelado de Datos | Arquitectura de Software |
 ```
 """)
 
 # Projects Section
-st.markdown("## PROJECTS")
+st.markdown("## PROYECTOS")
 
 projects = [
     {
         "title": "LETTERBOXD NETWORK ANALYSIS",
-        "period": "APR 2024 - PRESENT",
+        "period": "ABRIL 2024 - PRESENTE",
         "link": "https://github.com/juanjuanjuanfer/Letterboxd-Network-Analysis",
         "details": [
-            "Social network analysis implementation",
-            "Custom scraper development",
-            "Community detection algorithms",
-            "Genre preference clustering"
+            "Implementación de Análisis de Redes Sociales.",
+            "Desarrollo de Scraper personalizado.",
+            "Algoritmos de detección de comunidades.",
+            "Clustering de preferencias de géneros de películas."
         ]
     },
     {
         "title": "PYBOXD LIBRARY",
-        "period": "SEP 2024 - PRESENT",
+        "period": "SEPTIEMBRE 2024 - PRESENTE",
         "link": "https://github.com/juanjuanjuanfer/PyBoxd",
         "details": [
-            "Web scraping library development",
-            "OOP implementation with BeautifulSoup",
-            "Comprehensive data extraction",
-            "GitHub Copilot integration"
+            "Desarrollo de librería de Web Scraping.",
+            "Implemetación de Programación Orientada a Objetos con BeautifulSoup y Multithreading.",
+            "Extracción de Comprehensive data.",
         ]
     },
     {
         "title": "LETTERBOXD FILM TRACKER",
-        "period": "SEP 2024 - PRESENT",
+        "period": "SEPTIEMBRE 2024 - PRESENTE",
         "link": "https://github.com/juanjuanjuanfer/yet_to_be_named",
         "details": [
-            "In collaboration with Ramayo, J. https://www.linkedin.com/in/juliana-ramayo-cardoso-286017226/",
-            "Film recommendation system implementation",
-            "User-based collaborative filtering",
-            "Content-based filtering",
-            "Collaborative filtering algorithms"
+            "En colaboración con Ramayo, J. https://www.linkedin.com/in/juliana-ramayo-cardoso-286017226/",
+            "Implementaciónde de un sistema de recomendación de películas.",
+            "Filtros User-based y Content-based",
+            "Algoritmos de análisis de sentimientos de reviews y otras métricas."
         ]
     }
 ]
@@ -299,14 +296,14 @@ for project in projects:
         st.markdown(f"[SOURCE CODE]({project['link']})")    
 
 # Contact Form with brutalist design
-st.markdown("## CONTACT")
+st.markdown("## CONTACTO")
 contact_form = """
 <div class="contact-form">
     <form action="https://formsubmit.co/fercruzjuan2002@gmail.com" method="POST">
-        <input type="text" name="name" placeholder="NAME" required>
-        <input type="email" name="email" placeholder="EMAIL" required>
-        <textarea name="message" placeholder="MESSAGE" rows="5" required></textarea>
-        <button type="submit">SEND MESSAGE</button>
+        <input type="text" name="name" placeholder="NOMBRE" required>
+        <input type="email" name="email" placeholder="CORREO" required>
+        <textarea name="message" placeholder="MENSAJE" rows="5" required></textarea>
+        <button type="submit">ENVIAR MENSAJE</button>
     </form>
 </div>
 """
